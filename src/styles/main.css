@@ -138,6 +138,16 @@ body {
 .c-text-container textarea::placeholder {
   color: #b7b6b6;
 }
+.c-text-container textarea::-webkit-scrollbar {
+  width: 4px;
+}
+.c-text-container textarea::-webkit-scrollbar-track {
+  background: #fff;
+}
+.c-text-container textarea::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 8px;
+}
 .c-text-container .c-output-text {
   border-radius: 0px;
   border-left: 1px solid #ccc;
@@ -146,30 +156,108 @@ body {
 .c-text-controls {
   list-style: none;
   padding: 12px 15px;
-}
-
-.c-text-controls,
-.c-language-handler,
-.c-original-text__icons,
-.c-original-text__icons i,
-.c-translated-text__icons,
-.c-translated-text__icons i {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.c-original-text__icons,
-.c-translated-text__icons {
-  width: 38%;
+.c-text-controls .c-language-handler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.c-original-text__icons i,
-.c-translated-text__icons i {
+.c-text-controls .c-original-text__icons {
+  padding-right: 15px;
+  border-right: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.c-text-controls .c-translated-text__icons {
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.c-text-controls i {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 50px;
   color: #adadad;
   font-size: 14px;
   cursor: pointer;
   transition: transform 0.2s ease;
   justify-content: center;
+}
+.c-text-controls i:active {
+  transform: scale(0.9);
+}
+.c-text-controls select {
+  color: #333;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: none;
+  padding-left: 5px;
+}
+.c-text-controls select::-webkit-scrollbar {
+  width: 8px;
+}
+.c-text-controls select::-webkit-scrollbar-track {
+  background: #fff;
+}
+.c-text-controls select::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+.c-text-controls .c-language-handler {
+  color: #adadad;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.submit-translation {
+  width: 100%;
+  padding: 14px;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  border-radius: 5px;
+  background: #954bff;
+}
+
+@media (max-width: 660px) {
+  .o-container {
+    padding: 20px;
+  }
+  .c-text-container {
+    flex-direction: column;
+  }
+  .c-text-container .c-output-text {
+    border-left: 0px;
+    border-top: 1px solid #ccc;
+  }
+  .c-text-container textarea {
+    height: 200px;
+  }
+  .c-text-container .c-original-text__icons,
+.c-text-container .c-translated-text__icons {
+    display: none;
+  }
+  .c-text-container select {
+    font-size: 16px;
+  }
+  .c-text-container .c-language-handler {
+    font-size: 14px;
+  }
+  .submit-translation {
+    padding: 13px;
+    font-size: 16px;
+  }
 }
