@@ -88,7 +88,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "RobotoSlab", sans-serif;
 }
 
 body {
@@ -97,7 +96,8 @@ body {
   justify-content: center;
   padding: 0 10px;
   min-height: 100vh;
-  background: #5372F0;
+  font-family: "Catamaran", sans-serif;
+  background: linear-gradient(109.6deg, rgb(218, 185, 252) 11.2%, rgb(125, 89, 252) 91.1%);
 }
 
 .o-container {
@@ -112,4 +112,33 @@ body {
 .o-wrapper {
   border-radius: 5px;
   border: 1px solid #ccc;
+}
+
+.c-text-container {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.c-text-container textarea {
+  flex: 1;
+  height: 250px;
+  border: none;
+  outline: none;
+  resize: none;
+  background: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.c-text-container textarea::-moz-placeholder {
+  color: #b7b6b6;
+}
+.c-text-container textarea:-ms-input-placeholder {
+  color: #b7b6b6;
+}
+.c-text-container textarea::placeholder {
+  color: #b7b6b6;
+}
+.c-text-container .c-output-text {
+  border-radius: 0px;
+  border-left: 1px solid #ccc;
 }

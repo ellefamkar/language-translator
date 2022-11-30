@@ -89,65 +89,74 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "RobotoSlab", sans-serif;
 }
 
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 10px;
   min-height: 100vh;
-  background: #5372F0;
+  font-family: "Catamaran", sans-serif;
+  background: linear-gradient(
+    109.6deg,
+    rgb(218, 185, 252) 11.2%,
+    rgb(125, 89, 252) 91.1%
+  );
 }
-.o-container{
+
+.o-container {
   max-width: 690px;
   width: 100%;
   padding: 30px;
   background: #fff;
   border-radius: 7px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.01);
 }
-.o-wrapper{
+
+.o-wrapper {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-// .o-wrapper .text-input{
-//   display: flex;
-//   border-bottom: 1px solid #ccc;
-// }
-// .text-input .to-text{
-//   border-radius: 0px;
-//   border-left: 1px solid #ccc;
-// }
-// .text-input textarea{
-//   height: 250px;
-//   width: 100%;
-//   border: none;
-//   outline: none;
-//   resize: none;
-//   background: none;
-//   font-size: 18px;
-//   padding: 10px 15px;
-//   border-radius: 5px;
-// }
-// .text-input textarea::placeholder{
-//   color: #b7b6b6;
-// }
-// .controls, li, .icons, .icons i{
+.c-text-container {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+
+  textarea {
+    flex: 1;
+    height: 250px;
+    border: none;
+    outline: none;
+    resize: none;
+    background: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+
+    &::placeholder {
+      color: #b7b6b6;
+    }
+  }
+  .c-output-text {
+    border-radius: 0px;
+    border-left: 1px solid #ccc;
+  }
+}
+
+// .c-text-controls, li, .icons, .icons i{
 //   display: flex;
 //   align-items: center;
 //   justify-content: space-between;
 // }
-// .controls{
+// .c-text-controls{
 //   list-style: none;
 //   padding: 12px 15px;
 // }
-// .controls .row .icons{
+// .c-text-controls .row .icons{
 //   width: 38%;
 // }
-// .controls .row .icons i{
+// .c-text-controls .row .icons i{
 //   width: 50px;
 //   color: #adadad;
 //   font-size: 14px;
@@ -155,15 +164,15 @@ body{
 //   transition: transform 0.2s ease;
 //   justify-content: center;
 // }
-// .controls .row.from .icons{
+// .c-text-controls .row.from .icons{
 //   padding-right: 15px;
 //   border-right: 1px solid #ccc;
 // }
-// .controls .row.to .icons{
+// .c-text-controls .row.to .icons{
 //   padding-left: 15px;
 //   border-left: 1px solid #ccc;
 // }
-// .controls .row select{
+// .c-text-controls .row select{
 //   color: #333;
 //   border: none;
 //   outline: none;
@@ -171,32 +180,32 @@ body{
 //   background: none;
 //   padding-left: 5px;
 // }
-// .text-input textarea::-webkit-scrollbar{
+// .c-text-container textarea::-webkit-scrollbar{
 //   width: 4px;
 // }
-// .controls .row select::-webkit-scrollbar{
+// .c-text-controls .row select::-webkit-scrollbar{
 //   width: 8px;
 // }
-// .text-input textarea::-webkit-scrollbar-track,
-// .controls .row select::-webkit-scrollbar-track{
+// .c-text-container textarea::-webkit-scrollbar-track,
+// .c-text-controls .row select::-webkit-scrollbar-track{
 //   background: #fff;
 // }
-// .text-input textarea::-webkit-scrollbar-thumb{
+// .c-text-container textarea::-webkit-scrollbar-thumb{
 //   background: #ddd;
 //   border-radius: 8px;
 // }
-// .controls .row select::-webkit-scrollbar-thumb{
+// .c-text-controls .row select::-webkit-scrollbar-thumb{
 //   background: #999;
 //   border-radius: 8px;
 //   border-right: 2px solid #ffffff;
 // }
-// .controls .exchange{
+// .c-text-controls .exchange{
 //   color: #adadad;
 //   cursor: pointer;
 //   font-size: 16px;
 //   transition: transform 0.2s ease;
 // }
-// .controls i:active{
+// .c-text-controls i:active{
 //   transform: scale(0.9);
 // }
 // .o-container button{
@@ -216,27 +225,27 @@ body{
 //   .o-container{
 //     padding: 20px;
 //   }
-//   .o-wrapper .text-input{
+//   .o-wrapper .c-text-container{
 //     flex-direction: column;
 //   }
-//   .text-input .to-text{
+//   .c-text-container .c-output-text{
 //     border-left: 0px;
 //     border-top: 1px solid #ccc;
 //   }
-//   .text-input textarea{
+//   .c-text-container textarea{
 //     height: 200px;
 //   }
-//   .controls .row .icons{
+//   .c-text-controls .row .icons{
 //     display: none;
 //   }
 //   .o-container button{
 //     padding: 13px;
 //     font-size: 16px;
 //   }
-//   .controls .row select{
+//   .c-text-controls .row select{
 //     font-size: 16px;
 //   }
-//   .controls .exchange{
+//   .c-text-controls .exchange{
 //     font-size: 14px;
 //   }
 // }
