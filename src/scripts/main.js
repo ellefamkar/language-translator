@@ -105,3 +105,20 @@ const languageHandler = document.querySelector(".js-language-handler");
 const select = document.querySelectorAll(".js-select");
 const icons = document.querySelectorAll(".js-icons i");
 const translateBtn = document.querySelector(".js-button");
+
+select.forEach((tag, id) => {
+  for (let country_code in countries) {
+    let selected =
+      id == 0
+        ? country_code == "en-GB"
+          ? "selected"
+          : ""
+        : country_code == "hi-IN"
+        ? "selected"
+        : "";
+    let option = `<option ${selected} value="${country_code}">${countries[country_code]}</option>`;
+    tag.insertAdjacentHTML("beforeend", option);
+  }
+});
+
+// select.forEach((tag, id) => {});
