@@ -107,16 +107,16 @@ const icons = document.querySelectorAll(".js-icons i");
 const translateBtn = document.querySelector(".js-button");
 
 select.forEach((tag, id) => {
-  for (let country_code in countries) {
+  for (let countryCode in countries) {
     let selected =
       id == 0
-        ? country_code == "en-GB"
+        ? countryCode == "en-GB"
           ? "selected"
           : ""
-        : country_code == "hi-IN"
+        : countryCode == "hi-IN"
         ? "selected"
         : "";
-    let option = `<option ${selected} value="${country_code}">${countries[country_code]}</option>`;
+    let option = `<option ${selected} value="${countryCode}">${countries[countryCode]}</option>`;
     tag.insertAdjacentHTML("beforeend", option);
   }
 });
