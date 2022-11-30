@@ -31,30 +31,30 @@
     <div class="o-container">
         <div class="o-wrapper">
             <div class="c-text-container">
-                <textarea class="c-input-text" placeholder="Enter  your text" spellcheck="false"></textarea>
-                <textarea readonly disabled class="c-output-text" placeholder="Translation"
+                <textarea class="c-input-text js-input-text" placeholder="Enter  your text" spellcheck="false"></textarea>
+                <textarea readonly disabled class="c-output-text js-output-text" placeholder="Translation"
                     spellcheck="false"></textarea>
             </div>
             <ul class="c-text-controls">
                 <li class="c-original-text">
-                    <div class="c-original-text__icons">
+                    <div class="c-original-text__icons js-icons">
                         <i id="c-original-text__icons-voice" class="fas fa-volume-up"></i>
                         <i id="c-original-text__icons-copy" class="fas fa-copy"></i>
                     </div>
-                    <select name="c-original-text__name" id="c-original-text__name" title="original text"></select>
+                    <select name="c-original-text__name" class="js-select" id="c-original-text__name" title="original text"></select>
                 </li>
-                <li class="c-language-handler"><i class="fas fa-exchange-alt"></i></li>
+                <li class="c-language-handler js-language-handler"><i class="fas fa-exchange-alt"></i></li>
                 <li class="c-translated-text">
-                    <select name="c-translated-text__name" id="c-translated-text__name"
+                    <select name="c-translated-text__name" class="js-select"  id="c-translated-text__name"
                         title="translated text"></select>
-                    <div class="c-translated-text__icons">
+                    <div class="c-translated-text__icons js-icons">
                         <i id="c-translated-text__icons-voice" class="fas fa-volume-up"></i>
                         <i id="c-translated-text__icons-copy" class="fas fa-copy"></i>
                     </div>
                 </li>
             </ul>
         </div>
-        <button class="submit-translation">Translate Text</button>
+        <button class="submit-translation js-button">Translate Text</button>
     </div>
 
     <script src="./src/scripts/main.js"></script>
