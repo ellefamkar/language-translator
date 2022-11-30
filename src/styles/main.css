@@ -90,3 +90,26 @@
   box-sizing: border-box;
   font-family: "RobotoSlab", sans-serif;
 }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  background: #5372F0;
+}
+
+.o-container {
+  max-width: 690px;
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.01);
+}
+
+.o-wrapper {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
